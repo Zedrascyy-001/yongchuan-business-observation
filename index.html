@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>永川商业生态观察</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.8;
+    padding-bottom: 40px;
+  }
+  .header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 24px 16px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .header h1 { font-size: 20px; font-weight: 600; letter-spacing: 1px; }
+  .header .sub { font-size: 12px; color: #aaa; margin-top: 6px; }
+  .nav {
+    background: #fff;
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 72px;
+    z-index: 9;
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+  .nav-item {
+    display: inline-block;
+    font-size: 13px;
+    color: #666;
+    margin-right: 16px;
+    cursor: pointer;
+  }
+  .nav-item.active { color: #e74c3c; font-weight: 600; }
+  .card {
+    background: #fff;
+    margin: 12px 16px;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .card-header { display: flex; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 6px; }
+  .tag {
+    background: #e74c3c;
+    color: #fff;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+  .tag.theory { background: #3498db; }
+  .date { font-size: 12px; color: #999; }
+  .card h2 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: #1a1a2e; }
+  .card h3 { font-size: 15px; font-weight: 600; margin: 20px 0 8px; color: #333; }
+  .card p { font-size: 14px; color: #444; margin-bottom: 10px; text-align: justify; }
+  .card ul { margin-left: 18px; font-size: 14px; color: #444; }
+  .card li { margin-bottom: 6px; }
+  .highlight { background: #fff8e1; padding: 12px 16px; border-radius: 8px; border-left: 3px solid #ffc107; margin: 16px 0; font-size: 14px; }
+  .divider { height: 1px; background: #eee; margin: 24px 0; }
+  .footer { text-align: center; font-size: 12px; color: #999; margin-top: 24px; padding: 24px 16px; }
+  .case-list { margin-top: 8px; }
+  .case-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    text-decoration: none;
+    color: inherit;
+  }
+  .case-item .case-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #666;
+    margin-right: 12px;
+    flex-shrink: 0;
+  }
+  .case-item .case-info { flex: 1; }
+  .case-item .case-title { font-size: 14px; font-weight: 500; color: #333; }
+  .case-item .case-meta { font-size: 12px; color: #999; margin-top: 2px; }
+  .case-item .case-arrow { color: #ccc; font-size: 14px; }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>永川商业生态观察</h1>
+  <div class="sub">每天一个案例，练出商业眼</div>
+</div>
+
+<div class="nav">
+  <span class="nav-item active" onclick="showTab('today')">今日案例</span>
+  <span class="nav-item" onclick="showTab('archive')">历史归档</span>
+  <span class="nav-item" onclick="showTab('about')">关于</span>
+</div>
+
+<!-- 今日案例 -->
+<div id="tab-today" class="tab-content">
+  <div class="card">
+    <div class="card-header">
+      <span class="tag">#001</span>
+      <span class="date">2026.06.24 · 第1月第1案</span>
+    </div>
+    <h2>奶茶·蜜雪的7天装修速度经济学</h2>
+    
+    <h3>1. 抓人开场</h3>
+    <p>永川商贸城附近，一家蜜雪冰城从签约到开张，只需要<strong>7天</strong>。</p>
+    <p>7天。你自家装修个厨房，光瓷砖就得晾半个月。蜜雪冰城是正经的品牌加盟店，要装招牌、接水电、铺设备、办食品经营许可证，全套下来7天搞定。</p>
+    <p>为什么？因为慢一天，亏一天。这不是效率，这是生死线。</p>
+    
+    <div class="divider"></div>
+    
+    <h3>2. 微观拆解</h3>
+    <p>算笔账。假设这家店月租8000块，一天就是266。装修拖7天和拖20天，差13天，3500块没了。这3500块，要卖1000杯柠檬水才能赚回来。</p>
+    <p>蜜雪的装修是模块化。你看到的红白门头，不是木工现场做的，是工厂预制好拉过来直接装。吧台、操作台、储冰柜，全是标准尺寸。水电点位图总部画好了，工人按图打孔，不用在现场扯皮。</p>
+    <p>假设这家店开在永川新城区某个社区路口，日均客单价8块，客流200人，日流水1600。奶茶毛利大概55%，一天毛利润880。</p>
+    <p>装修期租金+人工+总部督导费用，7天成本控制在5000以内。如果拖成20天，成本奔1万5。多出来的1万块，按一天880算，要卖将近12天才能补回来。</p>
+    <p>一个普通加盟商，10万积蓄砸进去，三个月回本和四个月回本，是两种心态。三个月回本，他敢想第二家。四个月回本，他天天晚上失眠。</p>
+    
+    <div class="divider"></div>
+    
+    <h3>3. 宏观拔高</h3>
+    <p>7天装修不是蜜雪聪明，是中国城镇化到一个阶段的必然。</p>
+    <p>永川这种城市，十年前奶茶店是"老板自己会做"，三个月筹备，半年才上轨。现在是第三代县城商业：第一代个人单干，第二代区域小品牌，第三代是全国连锁下沉。</p>
+    <p>蜜雪全国3万多家店，90%是加盟。它的核心竞争力不是奶茶多好喝，而是"让任何一个普通人都能快速复制一家店"。</p>
+    <p>这就是产业转型：从"手艺人开店"变成"系统开店"。你不需要懂奶茶，总部教你配方、供你原料、给你装修图、甚至帮你选地址。</p>
+    <p>消费升级也不是什么高端化，而是10块钱的奶茶变成了日常"小确幸"。不是奢侈品，是水电煤一样的基础消费。在永川，中学生放学买一杯4块钱的柠檬水，跟买瓶可乐一样自然。</p>
+    
+    <div class="divider"></div>
+    
+    <h3>4. 历史对照</h3>
+    <p>2000年前后，沙县小吃从福建三明批量复制到全国。那时候也是"7天上桌"：标准化拌面、炖罐、蒸饺，一个师傅教三天就能上岗。</p>
+    <p>沙县小吃的崛起和今天蜜雪冰城的崛起，底层逻辑一模一样：<strong>把一个简单的事情，做到无限可复制，然后靠规模赚钱。</strong></p>
+    <p>但沙县的问题是品牌分散，没有统一总部，没人收加盟费，标准也锁不住。蜜雪冰城把这个模式升级了——用供应链和品牌锁定加盟商，利润从"卖一碗面"变成了"卖一袋面粉+收品牌管理费"。</p>
+    
+    <div class="divider"></div>
+    
+    <h3>5. 行动指引</h3>
+    <p>今天下班或明天中午，花10分钟做三件事：</p>
+    <ul>
+      <li><strong>门头是不是全国一模一样的红白配色？</strong> 这是品牌标准化，你走到全国任何一家，一看就知道是它。</li>
+      <li><strong>操作台是不是紧贴墙面，没有一寸多余空间？</strong> 这是坪效最大化。奶茶店月租比住宅贵三倍，每一寸地方都是钱。</li>
+      <li><strong>员工动作是不是像流水线？</strong> 点单、扫码、封口、叫号，三个人像齿轮一样配合。这叫SOP，标准动作。</li>
+    </ul>
+    <p>然后抬头看看隔壁。如果隔壁是独立奶茶店，装修更"有设计感"，但员工手忙脚乱、店里空了一半面积没利用，你就明白什么叫"生意是算出来的，不是装出来的"。</p>
+    
+    <div class="highlight">
+      <strong>今日思考题：</strong>你家附近最近的蜜雪冰城，从装修到开业用了多久？如果超过15天，你觉得原因可能是什么？（回到Kimi对话中回复你的观察）
+    </div>
+    
+    <div class="highlight">
+      <strong>明日预告：</strong>#002 便利店·小卖部的门口纸箱信号——为什么门口堆满快递箱的便利店，反而比干干净净的活得更好？
+    </div>
+  </div>
+</div>
+
+<!-- 历史归档 -->
+<div id="tab-archive" class="tab-content hidden">
+  <div class="card">
+    <h2>案例归档</h2>
+    <div class="case-list">
+      <a href="#" class="case-item" onclick="showCase(0); return false;">
+        <span class="case-num">01</span>
+        <div class="case-info">
+          <div class="case-title">奶茶·蜜雪的7天装修速度经济学</div>
+          <div class="case-meta">2026.06.24 · 实地</div>
+        </div>
+        <span class="case-arrow">›</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- 关于 -->
+<div id="tab-about" class="tab-content hidden">
+  <div class="card">
+    <h2>关于本项目</h2>
+    <p><strong>永川商业生态观察</strong>是一套针对重庆市永川区商业环境的日常训练计划。</p>
+    <p>采用 2006 年央视《赢在中国》的风格——像马云、史玉柱那样点评，既算微观的账（成本、利润、回本周期），又联系宏观趋势（城镇化、消费升级、产业转型）。</p>
+    <p>说大白话，不用黑话。</p>
+    
+    <h3>训练节奏</h3>
+    <ul>
+      <li><strong>工作日</strong>：推实地观察案例，每个案例附带10分钟可验证的行动指引</li>
+      <li><strong>周末</strong>：推理论学习案例，纯学习，不需要实地验证</li>
+    </ul>
+    
+    <h3>交互方式</h3>
+    <ul>
+      <li>每天中午 12 点，GitHub Pages 自动更新当日案例</li>
+      <li>飞书/钉钉机器人推送摘要提醒</li>
+      <li>看完案例后，回到 Kimi 对话中回复你的观察与思考，获得点评反馈</li>
+    </ul>
+    
+    <p style="margin-top:20px; font-size:12px; color:#999;">本项目内容由 AI 生成，仅供学习交流。</p>
+  </div>
+</div>
+
+<div class="footer">
+  <p>每天一个案例，练出商业眼</p>
+  <p>永川商业生态观察 · 第1月</p>
+</div>
+
+<script>
+function showTab(name) {
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+  document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.remove('hidden');
+  event.target.classList.add('active');
+}
+function showCase(idx) {
+  showTab('today');
+  document.querySelector('.nav-item').classList.add('active');
+  window.scrollTo(0, 0);
+}
+</script>
+
+</body>
+</html>
